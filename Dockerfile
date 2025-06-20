@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Node.js 바이너리들을 PATH에 추가하여 npm, npx 등의 명령어를 쉽게 사용할 수 있도록 설정
 # /app/node_modules/.bin 경로를 시스템 PATH 앞부분에 추가
-ENV PATH = /app/node_modules/.bin:$PATH
+ENV PATH=/app/node_modules/.bin:$PATH
 
 # 호스트의 package.json 파일을 컨테이너의 /app/package.json으로 복사
 COPY package.json /app/package.json
